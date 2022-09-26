@@ -7,6 +7,13 @@ using System.Linq;
 /*
  * Implementation Project
  * Software Engineering 1
+ * 
+ * This project takes in two numbers, adds them together, and
+ * then recursively takes the last digit off of the result.
+ * It adds that last digit to the result (that is now missing the last digit).
+ * It performs this until the result is a single digit (negative or positive).
+ * It then returns that result.
+ * 
  *
  * Christian Calhoun
  * Micah Crawford
@@ -47,7 +54,7 @@ namespace Project1
             return;
         }
 
-        // Recursive method which
+        // Method which recursively finds result of last value of number added with same number without that digit
         public static int GetLastDigitAddedWithRestOfNum(int num) {
             // This retrieves the last digit of he number
             int lastDigit = num % 10;
@@ -70,5 +77,19 @@ namespace Project1
             return GetLastDigitAddedWithRestOfNum(added);
         }
 
+        // Unit test to verify correct result from normal values
+        public static bool ReturnsCorrectResult() {
+            // unimpl
+        }
+
+        // Unit test to verify input that would result in a negative result does
+        public static bool CanReturnNegative() {
+            // unimpl
+        }
+
+        // Only one digit inputted returns false
+        public static bool ReturnsFromNotEnoughDigits() {
+            // unimpl
+        }
     }
 }
